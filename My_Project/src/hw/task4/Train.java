@@ -1,5 +1,6 @@
 package com.itacademy.lesson11.hw.task4;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class Train {
@@ -40,5 +41,17 @@ public class Train {
                 ",\tdestination= '" + destination + '\'' +
                 ",\tdeparture_time= " + departure_time.getTimeFormatted() +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Train train)) return false;
+        return getNumber() == train.getNumber() && Objects.equals(getDestination(), train.getDestination()) && Objects.equals(getDeparture_time(), train.getDeparture_time());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getNumber(), getDestination(), getDeparture_time());
     }
 }
