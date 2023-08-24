@@ -49,8 +49,7 @@ public class Schedule {
     }
 
     public List<Train> sortSchedule() {
-
-
+        
         int min;
         Train temp;
         for (int i = 0; i < schedule.size() - 1; i++) {
@@ -70,11 +69,30 @@ public class Schedule {
             schedule.set(i, schedule.get(min));
             schedule.set(min, temp);
 
-
         }
 
         return schedule;
     }
 
+    public List<Train> sortNumber() {
+
+        int min;
+        Train temp;
+        for (int i = 0; i < schedule.size() - 1; i++) {
+
+            min = i;
+            for (int j = i + 1; j < schedule.size(); j++) {
+                if (schedule.get(j).getNumber() < schedule.get(min).getNumber()) {
+                    min = j;
+                }
+            }
+            temp = schedule.get(i);
+            schedule.set(i, schedule.get(min));
+            schedule.set(min, temp);
+
+        }
+
+        return schedule;
+    }
 
 }

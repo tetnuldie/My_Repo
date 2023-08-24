@@ -2,11 +2,12 @@ package com.itacademy.lesson11.hw.task4;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        
+
         Schedule sc = new Schedule(15);
         var schedule_1 = sc.getSchedule();
 
@@ -16,6 +17,13 @@ public class Main {
         System.out.println();
 
         sc.sortSchedule();//sort train schedule
+
+        for (Train t : schedule_1){//sorted trains schedule
+            System.out.println(t.toString());
+        }
+        System.out.println();
+
+        sc.sortNumber();//sort train by number
 
         for (Train t : schedule_1){//sorted trains schedule
             System.out.println(t.toString());
