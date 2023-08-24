@@ -12,11 +12,11 @@ public class Main {
         Group g2 = new Group(listFill(), 2);
         Group g3 = new Group(listFill(), 3);
 
-        List<Student> exc1 = g1.getExcellents(g1.getStudents());
+        var exc1 = g1.getExcellents(g1.getStudents());
 
 
-        for(int i = 0; i < exc1.size(); i++){
-            System.out.println(exc1.get(i).getName());
+        for(Student s : exc1){
+            System.out.println(s.getName());
         }
     }
 
