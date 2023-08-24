@@ -6,29 +6,27 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-//        List<Train> schedule_1 = new ArrayList<>();
-
+        
         Schedule sc = new Schedule(15);
         var schedule_1 = sc.getSchedule();
 
-        for (int i = 0; i < schedule_1.size(); i++){//initial trains data
-            System.out.println(schedule_1.get(i).toString());
+        for (Train t : schedule_1){//initial trains data
+            System.out.println(t.toString());
         }
         System.out.println();
 
         sc.sortSchedule();//sort train schedule
 
-        for (int i = 0; i < schedule_1.size(); i++){//sorted trains schedule
-            System.out.println(schedule_1.get(i).toString());
+        for (Train t : schedule_1){//sorted trains schedule
+            System.out.println(t.toString());
         }
         System.out.println();
 
         try {//Get trains list by input number
-            List<Train> sc2 = sc.getTrainByNumber(intInput());
+            var sc2 = sc.getTrainByNumber(intInput());
 
-            for (int i = 0; i < sc2.size(); i++) {
-                System.out.println(sc2.get(i).toString());
+            for (Train t : sc2) {
+                System.out.println(t.toString());
             }
         } catch (RuntimeException e) {
             System.out.println(e.getMessage());
