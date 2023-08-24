@@ -2,7 +2,6 @@ package com.itacademy.lesson11.hw.task4;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Schedule {
     private List<Train> schedule;
@@ -59,7 +58,7 @@ public class Schedule {
                 if (schedule.get(j).getDestination().compareTo(schedule.get(min).getDestination()) < 0) {
                     min = j;
                 } else if (schedule.get(j).getDestination().compareTo(schedule.get(min).getDestination()) == 0) {
-                    if (schedule.get(j).getDeparture_time().CompareTime(schedule.get(j).getDeparture_time(),
+                    if (schedule.get(j).getDeparture_time().compareTime(schedule.get(j).getDeparture_time(),
                             schedule.get(min).getDeparture_time())) {
                         min = j;
                     }

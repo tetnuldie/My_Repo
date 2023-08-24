@@ -1,6 +1,5 @@
 package com.itacademy.lesson11.hw.task4;
 
-import java.util.Objects;
 import java.util.Random;
 
 public class Time {
@@ -65,7 +64,7 @@ public class Time {
         return ftime;
     }
 
-    public boolean CompareTime(Time t1, Time t2){
+    public boolean compareTime(Time t1, Time t2){
         int t1second, t2second;
 
         t1second = t1.getHour() * 3600 + t1.getMinute() * 60 + t1.getSecond();
