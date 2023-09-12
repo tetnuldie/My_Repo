@@ -69,8 +69,6 @@ public class Employee implements Comparable<Employee> {
                 ", salary=" + salary +
                 '}';
     }
-
-
     @Override
     public int compareTo(Employee o) {
         return Float.compare(this.salary,o.salary);
